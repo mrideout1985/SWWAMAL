@@ -16,9 +16,10 @@ import { Distribution } from "./pages/agreements,/distribution/distribution";
 import { Other } from "./pages/agreements,/other/other";
 import { PostalNationalAgreements } from "./pages/agreements,/pna/postalNationalAgreements";
 import { Processing } from "./pages/agreements,/processing/processing";
-import { Campaigns } from "./pages/campaings,/campaigns";
+import { Campaigns } from "./pages/campaings/campaigns";
 import { Nav } from "./components/navbar/nav";
 import { Header } from "./components/header/header";
+import { News } from "./pages/news/news";
 
 function App() {
 	return (
@@ -30,6 +31,7 @@ function App() {
 					<Route component={Home} path="/" exact />
 					<Route component={Home} path="/home" />
 					<Route component={About} path="/about/" />
+					<Route component={News} path="/news" />
 					<Route component={Branch} path="/branch" />
 					<Route component={Agreements} path="/agreements" />
 					<Route component={Blog} path="/blog" />

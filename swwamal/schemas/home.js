@@ -1,12 +1,12 @@
 /* eslint-disable import/no-anonymous-default-export */
 export default {
-	name: "author",
-	title: "Author",
+	name: "home",
+	title: "Home",
 	type: "document",
 	fields: [
 		{
-			name: "name",
-			title: "Name",
+			name: "header",
+			title: "Header",
 			type: "string",
 		},
 		{
@@ -14,7 +14,7 @@ export default {
 			title: "Slug",
 			type: "slug",
 			options: {
-				source: "name",
+				source: "header",
 				maxLength: 96,
 			},
 		},
@@ -27,8 +27,8 @@ export default {
 			},
 		},
 		{
-			name: "bio",
-			title: "Bio",
+			name: "info",
+			title: "Info",
 			type: "array",
 			of: [
 				{
@@ -40,10 +40,4 @@ export default {
 			],
 		},
 	],
-	preview: {
-		select: {
-			title: "name",
-			media: "image",
-		},
-	},
 };

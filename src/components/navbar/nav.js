@@ -21,11 +21,11 @@ const Nav = () => {
 					<p>About</p>
 				</NavLink>
 				<NavLink
-					to="/branch"
+					to="/news"
 					className={styles.navlink}
 					activeClassName={styles.activenavlink}
 				>
-					<p>Branch</p>
+					<p>News</p>
 				</NavLink>
 				<NavLink
 					to="/campaigns"
