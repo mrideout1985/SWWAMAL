@@ -1,4 +1,44 @@
 .container {
-    padding: .5rem 1rem;
+	padding: 0.5rem 1rem;
 
+	.data {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		font-family: "Open Sans", sans-serif;
+		font-size: 1.5rem;
+		line-height: 2rem;
+		margin-top: 0;
+
+		.block {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: auto;
+			background-color: var(--main-color);
+
+			p {
+				margin: auto;
+				color: white;
+				vertical-align: baseline;
+				padding: 40px;
+			}
+		}
+
+		img {
+			margin: 0 1rem 0 0;
+		}
+
+		.block2 {
+			margin-top: 1rem;
+			background-color: var(--main-color);
+
+			p {
+				margin: auto;
+				color: white;
+				vertical-align: baseline;
+				padding: 40px;
+			}
+		}
+	}
 }

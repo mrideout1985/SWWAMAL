@@ -37,13 +37,27 @@ const Campaigns = () => {
 			campaignsData.map((post, key) => {
 				return (
 					<div key={key} className={styles["container__campaign"]}>
-						<h1>{post.title}</h1>
-						<img
-							src={urlFor(post?.image.asset.url)
-								.width(800)
-								.height(500)}
-							alt="d"
-						/>
+						<div className={styles.header}>
+							<h3>{post?.title}</h3>
+						</div>
+
+						<div className={styles.imageanddata}>
+							<div className={styles.image}>
+								<img
+									src={urlFor(post?.image.asset.url)
+										.width(600)
+										.height(400)}
+									alt="d"
+								/>
+							</div>
+							<div className={styles.cardinfo}>
+								<SanityBlockContent
+									dataset="production"
+									projectId="8bvty42v"
+									blocks={post?.body}
+								/>
+							</div>
+						</div>
 					</div>
 				);
 			})

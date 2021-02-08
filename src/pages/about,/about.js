@@ -36,17 +36,29 @@ const About = () => {
 
 	return (
 		<div className={styles.container}>
-			<SanityBlockContent
-				dataset="production"
-				projectId="8bvty42v"
-				blocks={aboutData?.body}
-			/>
-			<SanityBlockContent
-				dataset="production"
-				projectId="8bvty42v"
-				blocks={aboutData?.secondBody}
-			/>
-			<img src={urlFor(aboutData?.image.asset.url).width(800)} alt="d" />
+			<div className={styles.data}>
+				<img
+					src={urlFor(aboutData?.image.asset.url).width(600)}
+					alt="d"
+				/>
+				<div className={styles.block}>
+					<SanityBlockContent
+						dataset="production"
+						projectId="8bvty42v"
+						blocks={aboutData?.body}
+					/>
+				</div>
+			</div>
+
+			<div className={styles.data}>
+				<div className={styles.block2}>
+					<SanityBlockContent
+						dataset="production"
+						projectId="8bvty42v"
+						blocks={aboutData?.secondBody}
+					/>
+				</div>
+			</div>
 		</div>
 	);
 };
