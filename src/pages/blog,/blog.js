@@ -20,6 +20,8 @@ const Blog = () => {
 			slug,
 			author,
 			body,
+			description,
+			publishedAt,
 			mainImage{
                 asset->{
                     _id,
@@ -34,23 +36,20 @@ const Blog = () => {
 	}, []);
 
 	return (
-		<div className={styles.container}>
+		<section className={styles.container}>
 			{blogData &&
 				blogData.map((post, index) => (
-					<article>
-						{post.title}
-						<SanityBlockContent
-							dataset="production"
-							projectId="8bvty42v"
-							blocks={post?.body}
-						/>
-						<img
-							src={urlFor(post?.mainImage?.asset.url).width(800)}
-							alt="d"
-						/>
+					<article
+						className={styles.article}
+						style={{
+							backgroundImage: `url(${post.mainImage.asset.url})`,
+						}}
+						key={index}
+					>
+						<div className={styles.cardinfo}></div>
 					</article>
 				))}
-		</div>
+		</section>
 	);
 };
 

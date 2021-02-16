@@ -36,29 +36,30 @@ const Campaigns = () => {
 			campaignsData &&
 			campaignsData.map((post, key) => {
 				return (
-					<div key={key} className={styles["container__campaign"]}>
-						<div className={styles.header}>
-							<h3>{post?.title}</h3>
-						</div>
-
-						<div className={styles.imageanddata}>
-							<div className={styles.image}>
-								<img
-									src={urlFor(post?.image.asset.url)
-										.width(600)
-										.height(400)}
-									alt="d"
-								/>
+					<section key={key} className={styles.section}>
+						<div className={styles.containerdata}>
+							<div className={styles.header}>
+								<h2>{post.title}</h2>
 							</div>
-							<div className={styles.cardinfo}>
-								<SanityBlockContent
-									dataset="production"
-									projectId="8bvty42v"
-									blocks={post?.body}
-								/>
+							<div className={styles.imageandcardinfo}>
+								<div className={styles.image}>
+									<img
+										src={urlFor(post?.image.asset.url)
+											.width(500)
+											.height(400)}
+										alt="d"
+									/>
+								</div>
+								<div className={styles.cardinfo}>
+									<SanityBlockContent
+										dataset="production"
+										projectId="8bvty42v"
+										blocks={post?.body}
+									/>
+								</div>
 							</div>
 						</div>
-					</div>
+					</section>
 				);
 			})
 		);
