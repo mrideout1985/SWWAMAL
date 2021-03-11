@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import sanityClient from "../../client.js";
 import SanityBlockContent from "@sanity/block-content-to-react";
