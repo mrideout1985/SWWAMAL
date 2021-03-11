@@ -30,36 +30,41 @@ const About = () => {
 			}
 		}`
 			)
-			.then((data) => setAboutData(data[0]))
+			.then((data) => setAboutData(data))
 			.catch(console.error);
 	}, []);
 
 	return (
-		<div className={styles.container}>
-			<div className={styles.data}>
-				<img
-					src={urlFor(aboutData?.image.asset.url).width(600)}
-					alt="d"
-				/>
-				<div className={styles.block}>
-					<SanityBlockContent
-						dataset="production"
-						projectId="8bvty42v"
-						blocks={aboutData?.body}
-					/>
-				</div>
-			</div>
+		<>
+			{aboutData &&
+				aboutData.map((about, index) => (
+					<div key={index} className={styles.container}>
+						<div className={styles.data}>
+							<img
+								src={urlFor(about?.image.asset.url).width(600)}
+								alt="d"
+							/>
+							<div className={styles.block}>
+								<SanityBlockContent
+									dataset="production"
+									projectId="8bvty42v"
+									blocks={about.body}
+								/>
+							</div>
+						</div>
 
-			<div className={styles.data}>
-				<div className={styles.block2}>
-					<SanityBlockContent
-						dataset="production"
-						projectId="8bvty42v"
-						blocks={aboutData?.secondBody}
-					/>
-				</div>
-			</div>
-		</div>
+						<div className={styles.data}>
+							<div className={styles.block2}>
+								<SanityBlockContent
+									dataset="production"
+									projectId="8bvty42v"
+									blocks={about.secondBody}
+								/>
+							</div>
+						</div>
+					</div>
+				))}
+		</>
 	);
 };
 

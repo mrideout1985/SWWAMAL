@@ -17,9 +17,9 @@ const News = () => {
 							height: "100%",
 						}}
 						theme="light"
-						noHeader="true"
+						noHeader={true}
 						// noBorders="true"
-						noFooter="true"
+						noFooter={true}
 					/>
 				}
 			</div>

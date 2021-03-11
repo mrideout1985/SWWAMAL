@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import sanityClient from "../../client.js";
-import SanityBlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
 import styles from "./blog.module.scss";
 import { Link } from "react-router-dom";
@@ -9,6 +8,7 @@ const Blog = () => {
 	const [blogData, setBlogData] = useState(null);
 
 	const builder = imageUrlBuilder(sanityClient);
+	// eslint-disable-next-line no-unused-vars
 	function urlFor(source) {
 		return builder.image(source);
 	}

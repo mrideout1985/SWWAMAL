@@ -19,8 +19,7 @@ const Home = () => {
 			.fetch(
 				`*[_type == "home"]{
 			header,
-			info,
-		
+			info,		
 			slug,
 			image{
                 asset->{
@@ -32,16 +31,29 @@ const Home = () => {
 			
         }`
 			)
-			.then((data) => setHomeData(data[0]))
+			.then((data) => setHomeData(data))
 			.catch(console.error);
 	}, []);
 
 	return (
 		<div className={styles.container}>
-			<img
-				src={urlFor(homeData?.image.asset.url).width(800).height(500)}
-				alt="d"
-			/>
+			{homeData &&
+				homeData.map((home, index) => (
+					<article key={index}>
+						<header>{home.header}</header>
+						<div className={styles["homepage"]}>
+							<img
+								src={home.image.asset.url}
+								alt="homepageoimage"
+							/>
+							<SanityBlockContent
+								dataset="production"
+								projectId="8bvty42v"
+								blocks={home?.info}
+							/>
+						</div>
+					</article>
+				))}
 		</div>
 	);
 };
