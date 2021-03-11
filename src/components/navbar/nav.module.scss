@@ -6,44 +6,42 @@
 		justify-content: space-between;
 		align-items: center;
 		flex-direction: row;
-
+		border: 0.2px solid var(--main-color);
 		.navlink {
 			text-decoration: none;
 			text-transform: uppercase;
 			width: 100%;
+			height: 100%;
 			background-color: var(--main-color);
 			border: 1px solid #fff;
 			box-sizing: border-box;
+			transition: all 0.5s ease-in-out;
+			padding: 0.5rem 1rem;
 
 			p {
 				line-height: 30px;
 				margin: 0;
 				text-align: center;
 				font-family: Arial;
-				font-size: 1rem;
-				font-weight: 400;
+				font-size: 1.8rem;
+				font-weight: 700;
 				color: #fff;
-				transition: all 0.1s ease;
+				transition: all 0.5s ease;
 			}
 
 			&:hover {
 				p {
-					transition: all 0.1s ease;
-					font-size: 1.2rem;
+					transition: all 0.5s ease-in-out;
 				}
 			}
 		}
 
 		.activenavlink {
-			background-color: var(--bg-offset);
-			transition: all 0.1s ease;
+			background-color: white;
+			transition: all 0.35s ease-in-out;
 
 			p {
-				color: white;
-				font-size: 1.2rem;
-			}
-
-			&:hover {
+				color: black;
 			}
 		}
 	}

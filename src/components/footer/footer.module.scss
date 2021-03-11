@@ -1,0 +1,52 @@
+footer {
+	margin: 0.5rem 1rem;
+	height: 10rem;
+	background-color: #ce0f69;
+	display: flex;
+	justify-content: space-between;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+
+	.address {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		p {
+		}
+
+		img {
+			height: 3rem;
+			width: 3rem;
+			margin: 1rem;
+		}
+	}
+	.phone {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			height: 3rem;
+			width: 3rem;
+			margin: 1rem;
+		}
+	}
+	.email {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 1rem;
+
+		a {
+			color: white;
+			&:visited {
+				color: white;
+			}
+		}
+
+		img {
+			height: 3rem;
+			width: 3rem;
+			margin: 1rem;
+		}
+	}
+}

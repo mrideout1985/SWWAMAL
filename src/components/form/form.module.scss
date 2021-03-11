@@ -1,0 +1,24 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+	height: 100%;
+
+	.input {
+		flex-grow: 1;
+		margin: 1rem 1rem 0 0;
+	}
+
+	.textarea {
+		resize: none;
+		margin: 1rem 1rem 0 0;
+		height: 10rem;
+	}
+
+	.submit {
+		width: 5rem;
+		padding: 0.4rem 0.8rem;
+		margin: 1rem 0 1rem 0;
+	}
+}

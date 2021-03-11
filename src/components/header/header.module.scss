@@ -1,25 +1,22 @@
 .header {
-padding: .5rem 1rem;
-margin: auto; 
-        .container {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
+	padding: 0.5rem 1rem;
+	margin: auto;
+	.container {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
 
-            h1 {
-                font-family: open sans;
-                font-weight: 700;
-                font-size: 3rem;
-                color: var(--main-color);
-                margin-bottom: 0;
-            }
+		h1 {
+			font-family: open sans;
+			font-weight: 700;
+			font-size: 3rem;
+			color: var(--main-color);
+			margin-bottom: 0;
+		}
 
-            img {
-                height: 4rem;
-                margin: 32.16px 0 0 0;
-                
-            }
-
-            
-        }
+		img {
+			height: 4rem;
+			margin: 32.16px 0 0 0;
+		}
+	}
 }
