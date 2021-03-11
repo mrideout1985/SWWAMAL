@@ -1,17 +1,7 @@
 import React from "react";
 import styles from "./news.module.scss";
-import {
-	TwitterTimelineEmbed,
-	// TwitterShareButton,
-	// TwitterFollowButton,
-	// TwitterHashtagButton,
-	// TwitterMentionButton,
-	// TwitterTweetEmbed,
-	// TwitterMomentShare,
-	// TwitterDMButton,
-	// TwitterVideoEmbed,
-	// TwitterOnAirButton,
-} from "react-twitter-embed";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
+import twitter from "../../assets/images/twitterundraw.svg";
 
 const News = () => {
 	return (
@@ -20,7 +10,7 @@ const News = () => {
 				{
 					<TwitterTimelineEmbed
 						sourceType="profile"
-						screenName="rideoutmaffoo"
+						screenName="w_cwu"
 						options={{
 							tweetLimit: "5",
 							width: "100%",
@@ -32,6 +22,16 @@ const News = () => {
 						noFooter="true"
 					/>
 				}
+			</div>
+			<div className={styles.twitter}>
+				<div className={styles.newsheader}>
+					<p>
+						Keep up to date with all the latest news / campaigns.
+						Follow our social media websites for constant updates
+						and information straight frm the source
+					</p>
+				</div>
+				<img src={twitter} alt="twitter" />
 			</div>
 		</section>
 	);

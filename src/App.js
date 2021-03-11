@@ -20,6 +20,7 @@ import { Campaigns } from "./pages/campaings/campaigns";
 import { Nav } from "./components/navbar/nav";
 import { Header } from "./components/header/header";
 import { News } from "./pages/news/news";
+import { Footer } from "./components/footer/footer";
 
 function App() {
 	return (
@@ -44,7 +45,8 @@ function App() {
 					<Route component={PostalNationalAgreements} path="/pna" />
 					<Route component={Processing} path="/processing" />
 					<Route component={Campaigns} path="/campaigns" />
-					<Route component={SinglePost} path="/singlepost" />
+					<Route component={SinglePost} path="/singlepost/:slug" />
+					<Footer />
 				</Layout>
 			</Switch>
 		</BrowserRouter>

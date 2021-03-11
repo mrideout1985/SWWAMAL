@@ -3,6 +3,7 @@ import sanityClient from "../../client.js";
 import SanityBlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
 import styles from "./blog.module.scss";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
 	const [blogData, setBlogData] = useState(null);
@@ -36,20 +37,40 @@ const Blog = () => {
 	}, []);
 
 	return (
-		<section className={styles.container}>
+		<div className={styles.container}>
 			{blogData &&
 				blogData.map((post, index) => (
-					<article
-						className={styles.article}
-						style={{
-							backgroundImage: `url(${post.mainImage.asset.url})`,
-						}}
-						key={index}
-					>
-						<div className={styles.cardinfo}></div>
+					<article className={styles.article} key={index}>
+						{console.log(post)}
+						<div className={styles.post}></div>
+						<div
+							className={styles.cardinfo}
+							style={{
+								backgroundImage: `url(${post.mainImage.asset.url})`,
+							}}
+						>
+							<div className={styles.info}>
+								<div className={styles.header}>
+									<h1>{post.title}</h1>
+								</div>
+								<div className={styles.description}>
+									<h4>{post.description}</h4>
+									<span>
+										<Link
+											to={
+												"/singlepost/" +
+												post.slug.current
+											}
+										>
+											...read more
+										</Link>
+									</span>
+								</div>
+							</div>
+						</div>
 					</article>
 				))}
-		</section>
+		</div>
 	);
 };
 
