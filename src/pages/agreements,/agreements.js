@@ -6,7 +6,17 @@ const Agreements = () => {
 	return (
 		<section className={styles.container}>
 			<header className={styles.header}>
-				<h1>Agreements</h1>
+				<div>
+					<h1>
+						Here you will find the agreements relevant to your
+						section.
+					</h1>
+
+					<h2>
+						Please utilise the dropdown menu below and select your
+						category to navigate to the relevent documentation
+					</h2>
+				</div>
 			</header>
 			<div className={styles["agreements"]}>
 				<div className={styles["nav-links"]}>

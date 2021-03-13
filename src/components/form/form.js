@@ -1,39 +1,47 @@
 import React from "react";
-import { useForm } from "react-hook-form";
 import styles from "./form.module.scss";
 
 const Form = () => {
-	const { register, handleSubmit, errors } = useForm();
-	const onSubmit = (data) => console.log(data);
-
-	// console.log(watch("example")); // watch input value by passing the name of it
-
 	return (
-		<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-			{/* register your input into the hook by invoking the "register" function */}
+		<form
+			className={styles["form"]}
+			action="https://getform.io/f/c8166985-e707-4f02-8a36-401495892f6e"
+			method="POST"
+		>
+			<label htmlFor="name" aria-label="name">
+				Name
+			</label>
 			<input
-				className={styles.input}
+				id="name"
+				className={styles["input"]}
+				type="text"
 				name="name"
-				defaultValue="test"
-				ref={register}
 			/>
 
-			{/* include validation with required or other standard HTML validation rules */}
+			<label htmlFor="subject" aria-label="subject">
+				Subject
+			</label>
 			<input
-				className={styles.input}
-				name="subject"
-				ref={register({ required: true })}
+				id="subject"
+				className={styles["input"]}
+				type="email"
+				name="email"
 			/>
-			{/* errors will return when field validation fails  */}
 
+			<label aria-label="message" htmlFor="message">
+				Message
+			</label>
 			<textarea
-				className={styles.textarea}
+				id="message"
+				className={styles["textarea"]}
+				type="text"
 				name="message"
-				ref={register({ required: true })}
 			/>
-			{errors.exampleRequired && <span>This field is required</span>}
 
-			<input className={styles.submit} type="submit" />
+			<label aria-label="submit" htmlFor="submit"></label>
+			<button id="submit" className={styles["submit"]} type="submit">
+				Send
+			</button>
 		</form>
 	);
 };

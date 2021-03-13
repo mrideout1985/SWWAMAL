@@ -5,7 +5,7 @@ import { Home } from "./pages/home/home";
 import "./main.scss";
 import { About } from "./pages/about,/about";
 import { Agreements } from "./pages/agreements,/agreements";
-import { Blog } from "./pages/blog,/blog";
+import { Post } from "./pages/post/post";
 import { Contact } from "./pages/contact/contact";
 import { SinglePost } from "./pages/singlePost/singlePost";
 import { Branch } from "./pages/about,/branch/branch";
@@ -30,12 +30,13 @@ function App() {
 					<Header />
 					<Nav />
 					<Route component={Home} path="/" exact />
+					<Route component={SinglePost} path="/post/:slug/" />
+					<Route component={Post} path="/blog/" />
 					<Route component={Home} path="/home" />
 					<Route component={About} path="/about/" />
 					<Route component={News} path="/news" />
 					<Route component={Branch} path="/branch" />
 					<Route component={Agreements} path="/agreements" />
-					<Route component={Blog} path="/blog" />
 					<Route component={Contact} path="/contact" />
 					<Route component={LearningCentre} path="/learning" />
 					<Route component={Reps} path="/reps" />
@@ -45,7 +46,6 @@ function App() {
 					<Route component={PostalNationalAgreements} path="/pna" />
 					<Route component={Processing} path="/processing" />
 					<Route component={Campaigns} path="/campaigns" />
-					<Route component={SinglePost} path="/singlepost/:slug" />
 					<Footer />
 				</Layout>
 			</Switch>

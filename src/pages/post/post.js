@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import sanityClient from "../../client.js";
 import imageUrlBuilder from "@sanity/image-url";
-import styles from "./blog.module.scss";
+import styles from "./post.module.scss";
 import { Link } from "react-router-dom";
 
-const Blog = () => {
+const Post = () => {
 	const [blogData, setBlogData] = useState(null);
 
 	const builder = imageUrlBuilder(sanityClient);
@@ -41,7 +41,6 @@ const Blog = () => {
 			{blogData &&
 				blogData.map((post, index) => (
 					<article className={styles.article} key={index}>
-						{console.log(post)}
 						<div className={styles.post}></div>
 						<div
 							className={styles.cardinfo}
@@ -57,10 +56,8 @@ const Blog = () => {
 									<h4>{post.description}</h4>
 									<span>
 										<Link
-											to={
-												"/singlepost/" +
-												post.slug.current
-											}
+											to={"/post/" + post.slug.current}
+											key={post.slug.current}
 										>
 											...read more
 										</Link>
@@ -74,4 +71,4 @@ const Blog = () => {
 	);
 };
 
-export { Blog };
+export { Post };
