@@ -29,10 +29,11 @@
 				transition: all 0.5s ease;
 			}
 
-			&:hover {
-				p {
-					transition: all 0.5s ease-in-out;
-				}
+			&:focus {
+				-webkit-box-shadow: 0px 0px 8px 12px black;
+				box-shadow: 0px 0px 2px 4px black;
+				outline: none;
+				z-index: 99999;
 			}
 		}
 

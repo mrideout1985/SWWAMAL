@@ -5,9 +5,11 @@
 	grid-template-columns: repeat(1, 1fr);
 	grid-template-rows: auto;
 	gap: 1rem;
+	background-color: var(--main-color);
 
 	.article {
 		width: 90%;
+		margin: 2rem;
 		justify-self: center;
 		overflow: hidden;
 		border-radius: 5px;
@@ -86,7 +88,7 @@
 
 			&:hover {
 				&::after {
-					background-color: var(--main-color);
+					background-color: var(--second-color);
 					opacity: 1;
 				}
 
